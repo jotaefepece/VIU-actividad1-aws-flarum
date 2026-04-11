@@ -70,10 +70,12 @@ A continuación se documenta cada una de las tareas realizadas:
 **Estado:** Completada
 
 ### 🔹 [Tarea 3 - Elastic IP](docs/03-elastic-ip.md)
-*   Asignación de IP elástica.
-*   Asociación a la instancia EC2.
+* Asignación de IP elástica.
+* Asociación a la instancia EC2.
+* Validación de acceso persistente tras reinicio.
+* Integración con servidor web desplegado.
 
- **Estado:** Pendiente
+**Estado:** Completada
 
 ### 🔹 [Tarea 4 - Base de datos RDS](docs/04-rds.md)
 *   Creación de instancia RDS (MySQL).
