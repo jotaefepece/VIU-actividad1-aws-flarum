@@ -16,7 +16,7 @@ Configurar un grupo de seguridad para una instancia EC2 cumpliendo las siguiente
 Durante la creación de la instancia EC2 se configuró correctamente el Security 
 Group desde el inicio.
 
- **Imagen 31**
+
 ![Configuración inicial de Security Group](../images/ec2/31-reformulando-instancia-con-SSH-HTTPS-y-HTTP.png)
 
 ### Reglas configuradas:
@@ -37,10 +37,12 @@ Group desde el inicio.
 
 ### 🔸 HTTP funcionando
 
- **Imagen 32**
+Evidencias:
+
 ![Servicio HTTP activo](../images/ec2/32-chequeo-de-servicio-HTTP-funcionando.png)
 
- **Imagen 33**
+Evidencias:
+
 ![HTTP operativo](../images/ec2/33-prueba-de-HTTP-Operativo.png)
 
 - [x] Apache responde correctamente en puerto 80.
@@ -49,7 +51,8 @@ Group desde el inicio.
 
 ### 🔸 HTTPS funcionando
 
- **Imagen 34**
+Evidencias:
+
 ![HTTPS operativo](../images/ec2/34-prueba-de-HTTPS-Operativo.png)
 
 Se habilitó SSL mediante:
@@ -66,8 +69,9 @@ sudo systemctl restart httpd
 
 ### 🔸 SSH funcionando
 
- **Imagen 35**
-![Acceso SSH restringido](../images/ec2/35-chequeo-de-acceso-SSH-restringido.png)
+Evidencias:
+
+![Acceso SSH restringido](../images/ec2/35-prueba-de-SSH-Operativo.png)
 
 - [x] Acceso permitido solo desde IP autorizada.
 - [x] Restricción funcionando correctamente.
@@ -80,11 +84,13 @@ Se aprovechó esta instancia para completar correctamente la Tarea 1:
 
 ### Montaje de volumen EBS
 
- **Imagen 36**
-![Volumen EBS detectado](../images/ec2/36-volumen-EBS-detectado.png)
+Evidencias:
 
- **Imagen 37**
-![Montaje persistente](../images/ec2/37-montaje-persistente-fstab.png)
+![Volumen EBS detectado](../images/ec2/36-realizando-configuración-de-tarea1.png)
+
+Evidencias:
+
+![Montaje persistente](../images/ec2/37-asignando-montaje-permanentemente-en-fstab.png)
 
 Configuración en `/etc/fstab`:
 ```text
@@ -96,8 +102,9 @@ UUID=8e9173f0-b67e-4ae2-8825-496b11fdae78 /mnt/sdb ext4 defaults,nofail 0 2
 
 ### Instalación de PHP y Composer
 
- **Imagen 38**
-![Instalación de dependencias](../images/ec2/38-instalacion-php-y-composer.png)
+Evidencias:
+
+![Instalación de dependencias](../images/ec2/38-retomando-configuraciones-php-composer.png)
 
 ```bash
 sudo dnf install php php-cli php-fpm php-mysqlnd php-json php-mbstring php-xml php-curl php-zip -y
@@ -113,8 +120,9 @@ sudo mv composer.phar /usr/local/bin/composer
 
 ### Instalación de Flarum
 
-📸 **Imagen 39**
-![Instalación de Flarum](../images/ec2/39-instalacion-de-flarum.png)
+Evidencias:
+
+![Instalación de Flarum](../images/ec2/39-instalando-flarum-y-permisos-a-usuario.png)
 
 ```bash
 sudo composer create-project flarum/flarum /mnt/sdb/www
@@ -128,16 +136,18 @@ sudo chmod -R 775 /mnt/sdb/www
 
 ### Validación en navegador
 
-📸 **Imagen 40**
-![Validación Flarum](../images/ec2/40-validacion-flarum-navegador.png)
+Evidencias:
+
+![Validación Flarum](../images/ec2/40-flarum-operativo-desde-HTTP.png)
 
 - [x] Aplicación accesible vía IP pública.
 - [x] Instalador de Flarum visible.
 
 ### Corrección de dependencias y permisos
 
- **Imagen 41**
-![Correcciones](../images/ec2/41-regularizando-dependencias-flarum-y-regulaizando-permisos.png)
+Evidencias:
+
+![Correcciones](../images/ec2/41-regularizando-dependencias-flarum-y regularizando-permisos.png)
 
 ```bash
 sudo chmod -R 775 /mnt/sdb/www/storage
@@ -149,16 +159,18 @@ sudo chmod -R 775 /mnt/sdb/www/public/assets
 
 ### Simulación de dominio local
 
- **Imagen 42**
-![Edición hosts](../images/ec2/42-edicion-archivo-hosts.png)
+Evidencias:
+
+![Edición hosts](../images/ec2/42-simulando-dominio-en-carpeta-hosts.png)
 
 Edición de `/etc/hosts`:
 ```text
 3.233.217.64 actividad1-08masw.universidadviu.com
 ```
 
- **Imagen 43**
-![Acceso vía dominio](../images/ec2/43-acceso-via-dominio-local.png)
+Evidencias:
+
+![Acceso vía dominio](../images/ec2/43-dominio-local-funcionando-ok-en-chrome.png)
 
 - [x] Dominio resuelve correctamente en entorno local.
 - [x] Acceso funcional vía HTTP.
