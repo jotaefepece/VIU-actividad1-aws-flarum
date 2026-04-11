@@ -124,7 +124,7 @@ A continuación se documenta cada una de las tareas realizadas:
 - [x] Infraestructura base desplegada.
 - [x] Servidor web operativo.
 - [x] Aplicación Flarum instalada.
-- [ ] Configuración de acceso público (Security Groups).
+- [x] Configuración de acceso público (Security Groups).
 - [ ] Base de datos (RDS).
 - [ ] Integración completa de la aplicación.
 

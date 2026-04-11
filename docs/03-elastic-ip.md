@@ -73,7 +73,7 @@ Evidencias:
 
 ![Configuración IP](../images/ec2/57-en-configuración-elástica-muestra-IP-elástica.png)
 
-- [x] Confirmación desde consola AWS de la IP activa.
+- [x] Confirmación desde interfaz de acceso a AWS, la IP activa.
 
 ---
 
