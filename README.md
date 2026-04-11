@@ -55,16 +55,19 @@ A continuación se documenta cada una de las tareas realizadas:
 *   Configuración de acceso SSH.
 *   Configuración de volumen EBS.
 *   Instalación de Apache, PHP y Composer.
-*   Despliegue de Flarum.
+*   Despliegue de Flarum base y testeo dentro del equipo.
 
  **Estado:** Completada  
- **Nota:** Instalación final pendiente de base de datos (ver Tarea 4).
+ **Nota:** Instalación base solamente, se continúa hasta tarea 4.
 
 ### 🔹 [Tarea 2 - Security Groups](docs/02-security-group.md)
-*   Acceso SSH restringido por IP.
-*   Apertura del puerto 80 (HTTP).
+* Acceso SSH restringido por IP.
+* Puertos 80 (HTTP) y 443 (HTTPS) abiertos a internet.
+* Configuración de montaje permanente.
+* Validación de servicios HTTP, HTTPS y SSH.
+* Integración con despliegue de Flarum.
 
- **Estado:** Pendiente
+**Estado:** Completada
 
 ### 🔹 [Tarea 3 - Elastic IP](docs/03-elastic-ip.md)
 *   Asignación de IP elástica.
@@ -102,7 +105,7 @@ A continuación se documenta cada una de las tareas realizadas:
 *   Reflexión sobre el aprendizaje.
 *   Evaluación del despliegue.
 
- **Estado:** ⏳ Pendiente
+ **Estado:** Pendiente
 
 ---
 
