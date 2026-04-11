@@ -135,6 +135,10 @@ A continuación se documenta cada una de las tareas realizadas:
 
 ---
 
-## Autor
+## Autores
 
-Actividad desarrollada para el curso Computación en la nube (08MASW).
+| Nombre          | GitHub                                         |
+|-----------------|------------------------------------------------|
+| Eduardo Criollo | [@eacriollo](https://github.com/eacriollo)     |
+| José Poblete    | [@jotaefepece](https://github.com/jotaefepece) |
+| Hubert Ferrer   | [@hferrer08](https://github.com/hferrer08)     |
