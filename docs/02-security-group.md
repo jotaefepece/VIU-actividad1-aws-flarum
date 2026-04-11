@@ -147,7 +147,7 @@ Evidencias:
 
 Evidencias:
 
-![Correcciones](../images/ec2/41-regularizando-dependencias-flarum-y regularizando-permisos.png)
+![Correcciones](../images/ec2/41-regularizando-dependencias-flarum-y-regularizando-permisos.png)
 
 ```bash
 sudo chmod -R 775 /mnt/sdb/www/storage
