@@ -244,5 +244,5 @@ con la configuración de almacenamiento y servidor web.
 
 Acceder al README principal de la actividad1 desde aquí:
 
-👉 [Volver al README](../README.md)
+🔙 [Volver al README](../README.md)
 

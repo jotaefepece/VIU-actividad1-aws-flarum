@@ -79,10 +79,14 @@ A continuación se documenta cada una de las tareas realizadas:
 
 ### 🔹 [Tarea 4 - Base de datos RDS](docs/04-rds.md)
 *   Creación de instancia RDS (MySQL).
-*   Configuración de acceso.
-*   Integración con Flarum.
+*   Configuración de acceso mediante Security Groups (EC2 + IP administrador).
+*   Conexión a la base de datos desde EC2.
+*   Creación de base de datos y usuario para Flarum.
+*   Integración completa con la aplicación Flarum.
+*   Configuración de backups automáticos (3:00 UTC, 10 días de retención).
+*   Configuración de ventana de mantenimiento (4:00 UTC).
 
- **Estado:** Pendiente
+ **Estado:** Completada
 
 ### 🔹 [Tarea 5 - Almacenamiento S3](docs/05-s3.md)
 *   Creación de bucket S3.

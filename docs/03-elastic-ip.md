@@ -148,4 +148,4 @@ Se ha configurado correctamente una dirección IP elástica:
 
 Acceder al README principal de la actividad1 desde aquí:
 
-👉 [Volver al README](../README.md)
+🔙 [Volver al README](../README.md)
