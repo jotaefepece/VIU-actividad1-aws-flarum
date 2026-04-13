@@ -93,13 +93,13 @@ A continuación se documenta cada una de las tareas realizadas:
 *   Configuración de acceso.
 *   Uso para almacenamiento de archivos.
 
- **Estado:** Pendiente
+ **Estado:** Completada
 
 ### 🔹 [Tarea 6 - Costes](docs/06-costes.md)
 *   Estimación de costes.
 *   Uso de recursos AWS.
 
- **Estado:** Pendiente
+ **Estado:** En curso
 
 ### 🔹 [Tarea 7 - AWS CLI](docs/07-cli.md)
 *   Uso de AWS CLI.
