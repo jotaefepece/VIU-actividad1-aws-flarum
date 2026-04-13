@@ -99,7 +99,7 @@ A continuación se documenta cada una de las tareas realizadas:
 *   Estimación de costes.
 *   Uso de recursos AWS.
 
- **Estado:** En curso
+ **Estado:** Completada
 
 ### 🔹 [Tarea 7 - AWS CLI](docs/07-cli.md)
 *   Uso de AWS CLI.
