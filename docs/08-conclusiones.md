@@ -1,0 +1,13 @@
+## Conclusiones
+
+Durante el desarrollo de la presente actividad se ha diseñado e implementado una arquitectura completa en AWS para el despliegue de una aplicación web, utilizando servicios fundamentales como Amazon EC2, Amazon RDS y Amazon S3. La solución desarrollada permite alojar una aplicación basada en PHP sobre un servidor Apache, con una base de datos gestionada en RDS y almacenamiento de recursos estáticos en S3, cumpliendo con los requisitos planteados en el enunciado.
+
+A lo largo del proceso se han adquirido conocimientos clave relacionados con la computación en la nube, especialmente en la creación y configuración de instancias EC2, la gestión de volúmenes EBS, la configuración de grupos de seguridad y la exposición controlada de servicios a través de puertos específicos. Asimismo, se ha trabajado con servicios gestionados como RDS, comprendiendo la importancia de la seguridad, el acceso restringido y la automatización de backups.
+
+Otro aspecto relevante ha sido el uso de Amazon S3 como sistema de almacenamiento de objetos, permitiendo la publicación de archivos accesibles mediante URL pública. Además, se ha realizado una estimación de costes utilizando la herramienta oficial de AWS, lo cual ha permitido comparar diferentes regiones y entender el impacto económico de las decisiones de arquitectura en la nube.
+
+Entre las principales dificultades encontradas destacan la correcta configuración de los grupos de seguridad, la conexión entre la instancia EC2 y la base de datos RDS, así como la gestión y montaje del volumen adicional EBS. También se ha requerido un proceso de adaptación para comprender el funcionamiento general de los servicios en AWS y su integración dentro de una arquitectura distribuida.
+
+En conclusión, esta actividad ha permitido consolidar una visión práctica del despliegue de aplicaciones en entornos cloud, integrando conceptos de infraestructura, seguridad, almacenamiento y costes. Se ha evidenciado la importancia de una correcta planificación de la arquitectura y el uso adecuado de los servicios proporcionados por AWS para garantizar soluciones eficientes, seguras y escalables.
+
+Como línea de mejora futura, se propone la automatización completa del despliegue mediante el uso de AWS CLI o herramientas de Infrastructure as Code (IaC) como CloudFormation o Terraform, lo que permitiría replicar la infraestructura de forma rápida, consistente y sin intervención manual.

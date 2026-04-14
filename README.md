@@ -105,13 +105,13 @@ A continuación se documenta cada una de las tareas realizadas:
 *   Uso de AWS CLI.
 *   Automatización de tareas.
 
- **Estado:** Pendiente
+ **Estado:** En proceso
 
 ### 🔹 [Tarea 8 - Conclusiones](docs/08-conclusiones.md)
 *   Reflexión sobre el aprendizaje.
 *   Evaluación del despliegue.
 
- **Estado:** Pendiente
+ **Estado:** Completada
 
 ---
 
