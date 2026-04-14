@@ -111,7 +111,7 @@ A continuación se documenta cada una de las tareas realizadas:
 *   Reflexión sobre el aprendizaje.
 *   Evaluación del despliegue.
 
- **Estado:** Pendiente
+ **Estado:** Completada
 
 ---
 
