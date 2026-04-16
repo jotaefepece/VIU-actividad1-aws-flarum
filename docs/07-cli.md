@@ -185,3 +185,22 @@ aws ec2 describe-instances   --instance-ids $INSTANCE_ID   --query "Reservations
 ### Conclusión parcial
 
 Se logró recrear mediante AWS CLI una infraestructura básica en AWS, incluyendo red, seguridad e instancia EC2, validando su funcionamiento tanto por consola como por comandos.
+
+---
+
+## Paso 13. Inicio de la instancia para continuar la configuración
+
+Se configuró nuevamente la variable de entorno correspondiente al identificador de la instancia EC2. Posteriormente, se ejecutó el comando para iniciar la instancia mediante AWS CLI y se verificó su estado `running`, junto con la obtención de su dirección IP pública para continuar con la configuración del servidor.
+
+**Comandos ejecutados:**
+```bash
+INSTANCE_ID=i-0a1145a208156da57
+
+aws ec2 start-instances --instance-ids $INSTANCE_ID
+
+aws ec2 wait instance-running --instance-ids $INSTANCE_ID
+
+aws ec2 describe-instances \
+  --instance-ids $INSTANCE_ID \
+  --query "Reservations[0].Instances[0].[InstanceId,State.Name,PublicIpAddress]" \
+  --output table
