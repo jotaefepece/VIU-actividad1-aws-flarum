@@ -672,3 +672,55 @@ df -h
 Se logró implementar y administrar una infraestructura EC2 completa utilizando AWS CLI, incluyendo configuración de red, seguridad, dirección IP elástica, almacenamiento persistente con EBS y automatización del montaje mediante `fstab`.
 
 Además, durante el proceso se resolvieron incidencias reales relacionadas con la ausencia de key pair, actualización de reglas SSH, reasociación de volúmenes y validación de persistencia, fortaleciendo la comprensión práctica del entorno AWS.
+
+# Tarea 7 - Parte 2: AWS CLI + RDS MySQL 
+
+### Paso 1. Verificación del entorno CLI
+
+Se verificó que la sesión de AWS CLI del laboratorio estuviera activa correctamente y que la región de trabajo fuera `us-east-1`, ya que AWS Academy limita el uso a regiones de Estados Unidos y la actividad se viene realizando en Norte de Virginia.
+
+### Paso 2. Identificación de la VPC por defecto
+
+Se consultó mediante AWS CLI la VPC por defecto de la cuenta para reutilizar la misma red donde ya se encuentra la infraestructura previa de la actividad.
+
+### Paso 3. Obtención del grupo de seguridad de la EC2
+
+Se identificó por CLI el grupo de seguridad asociado a la instancia EC2 `actividad1`, ya que la actividad exige permitir el acceso a la base de datos desde la máquina que aloja el servidor web Apache.
+
+### Paso 4. Creación del grupo de seguridad para RDS
+
+Se creó un nuevo grupo de seguridad específico para la instancia RDS MySQL, con el fin de controlar de forma separada el acceso a la base de datos.
+
+### Paso 5. Acceso al RDS desde la IP del administrador
+
+Se obtuvo la IP pública actual del entorno de administración mediante `curl ifconfig.me` y se configuró correctamente una regla de entrada al puerto `3306` en el grupo de seguridad de la base de datos RDS, restringiendo el acceso únicamente a dicha IP mediante notación CIDR `/32`.
+
+### Paso 6. Acceso al RDS desde la instancia EC2
+
+Se añadió una regla de entrada al puerto `3306` para permitir la conexión desde la IP privada de la instancia EC2 `actividad1`, cumpliendo con el requisito de conectividad entre el servidor web Apache y la base de datos MySQL.
+
+### Paso 7. Validación del grupo de seguridad del RDS
+
+Se verificó la configuración del grupo de seguridad asociado a la base de datos RDS, confirmando que el puerto `3306` quedó habilitado únicamente para la IP del administrador y para la IP privada de la instancia EC2.
+
+### Paso 8. Consulta de subredes para RDS
+
+Se listaron las subredes disponibles dentro de la VPC por defecto con el objetivo de seleccionar las necesarias para la creación del grupo de subredes de Amazon RDS.
+
+### Paso 9. Creación del DB Subnet Group
+
+Se creó el grupo de subredes para la instancia RDS utilizando subredes pertenecientes a distintas zonas de disponibilidad de la región `us-east-1`, permitiendo el correcto despliegue de la base de datos dentro de la VPC.
+
+### Paso 10. Creación de la instancia RDS MySQL
+
+Se creó la instancia RDS MySQL mediante AWS CLI utilizando la versión `5.7.44-rds.20260212`, correspondiente a una versión válida disponible en Amazon RDS. Se configuró con clase `db.t3.micro`, almacenamiento de `20 GiB gp2`, cifrado en reposo habilitado, sin Multi-AZ, con backups automáticos a las `03:00 UTC` con retención de `10 días` y ventana de mantenimiento a las `04:00 UTC`.
+
+### Paso 11. Espera de aprovisionamiento
+
+Se utilizó el comando `wait` de AWS CLI para esperar a que la instancia RDS completara su creación y alcanzara el estado disponible.
+
+### Paso 12. Validación final del RDS
+
+Se realizó la validación final de la instancia RDS MySQL mediante AWS CLI, comprobando su identificador, estado `available`, motor y versión, endpoint de conexión, puerto `3306`, clase `db.t3.micro`, almacenamiento de `20 GiB`, cifrado en reposo habilitado, ausencia de Multi-AZ y retención de backups de `10 días`.
+
+
