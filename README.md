@@ -40,6 +40,8 @@ La solución está compuesta por los siguientes componentes:
 ├── images
 │   ├── ec2
 │   ├── rds
+│   ├── CLI
+│   ├── costes
 │   └── s3
 └── README.md
 ```
@@ -105,7 +107,7 @@ A continuación se documenta cada una de las tareas realizadas:
 *   Uso de AWS CLI.
 *   Automatización de tareas.
 
- **Estado:** En proceso
+ **Estado:** Completada
 
 ### 🔹 [Tarea 8 - Conclusiones](docs/08-conclusiones.md)
 *   Reflexión sobre el aprendizaje.
